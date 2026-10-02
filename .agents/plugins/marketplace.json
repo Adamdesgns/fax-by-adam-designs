@@ -1,0 +1,20 @@
+{
+  "name": "adam-designs-fax",
+  "interface": {
+    "displayName": "Adam Designs Fax Plugins"
+  },
+  "plugins": [
+    {
+      "name": "faxdock",
+      "source": {
+        "source": "local",
+        "path": "./plugins/faxdock"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

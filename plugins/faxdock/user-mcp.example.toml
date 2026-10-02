@@ -1,0 +1,15 @@
+# Non-secret TEMPLATE: replace paths and marketplace ID locally before use.
+# Managed bundled MCP is disabled; its workflow skill stays enabled.
+[plugins."faxdock@adam-designs-fax".mcp_servers.faxdock]
+enabled = false
+
+[mcp_servers.faxdock]
+command = "node"
+args = ['C:\REPLACE\fax-marketplace\plugins\faxdock\src\server.js']
+env_vars = ["PHAXIO_API_KEY", "PHAXIO_API_SECRET"]
+default_tools_approval_mode = "prompt"
+
+[mcp_servers.faxdock.env]
+FAX_TRANSPORT = "disabled" # User changes to phaxio only after private setup/consent.
+FAX_DATA_DIR = 'C:\REPLACE\private-fax-data'
+FAX_ALLOWED_ROOTS = 'C:\REPLACE\private-fax-data;C:\REPLACE\chosen-pdf-folder'

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "faxdock": {
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/src/server.js"
+      ],
+      "cwd": "./",
+      "env": {
+        "FAX_TRANSPORT": "disabled",
+        "FAX_DATA_DIR": "${PLUGIN_DATA}/fax-jobs",
+        "FAX_ALLOWED_ROOTS": "${PLUGIN_DATA}"
+      }
+    }
+  }
+}
